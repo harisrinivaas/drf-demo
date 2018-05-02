@@ -8,7 +8,7 @@ from views import homePageView
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^api/', include('apps.core.urls', namespace='core')),
-    url(r'^helloworld/', homePageView.as_view(), name='home'),
+    url(r'^helloworld/', homePageView, name='home'),
 ]
 
 if settings.DEBUG:
