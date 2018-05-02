@@ -2,7 +2,7 @@ from django.conf import settings
 from django.conf.urls import url, include
 from django.contrib import admin
 
-from project.views import homePageView
+from views import homePageView
 
 
 urlpatterns = [
