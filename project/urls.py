@@ -2,13 +2,13 @@ from django.conf import settings
 from django.conf.urls import url, include
 from django.contrib import admin
 
-from project import views
+from project.views import homePageView
 
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^api/', include('apps.core.urls', namespace='core')),
-    url(r'^helloworld/', views.homePageView, name='home'),
+    url(r'^helloworld/', homePageView.as_view(), name='home'),
 ]
 
 if settings.DEBUG:
