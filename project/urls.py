@@ -2,7 +2,7 @@ from django.conf import settings
 from django.conf.urls import url, include
 from django.contrib import admin
 
-from views import homePageView, greetingsView
+from views import homePageView, greetingsView, hari
 
 
 urlpatterns = [
@@ -10,6 +10,7 @@ urlpatterns = [
     url(r'^api/', include('apps.core.urls', namespace='core')),
     url(r'^helloworld/', homePageView, name='home'),
     url(r'^greetings/', greetingsView, name='greetings'),
+    url(r'^hari/', greetingsView, name='hari'),
 ]
 
 if settings.DEBUG:

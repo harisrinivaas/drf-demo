@@ -6,3 +6,6 @@ def homePageView(request):
 
 def greetingsView(request):
     return HttpResponse('Greetings!')
+
+def hari(request):
+    return HttpResponse('hari!')
